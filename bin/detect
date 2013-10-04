@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "bundle-config-replacing-buildpack"
+exit 0
