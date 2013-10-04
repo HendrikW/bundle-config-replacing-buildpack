@@ -8,5 +8,7 @@ if [ -f $2/.bundle/config ]; then
 fi
 
 echo "       Copying over new .bundle/config"
-cp -v -R $1/.heroku_bundle $1/.bundle
+
+mkdir -p $1/.bundle
+cp -v $1/.heroku-bundle-config $1/.bundle/config
 sed -i "s,/app,$1,g" $1/.bundle/config
